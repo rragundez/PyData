@@ -1,11 +1,18 @@
 #get_faces.py
 #!/bin/env python
-import cv2, os, sys
+import cv2
+import os
+import sys
+
 sys.path.append('face_detection')
 from detection import *
 
 # Folder name to save the pictures to
-name = 'people/' + sys.argv[1]
+try: 
+	name = 'people/' + sys.argv[1].split()[0].strip()
+except:
+	print "Next time run: python build_dataset.py YOUR_NAME"
+	name = 'people/' + raw_input('What is your name?').split()[0].strip()
 
 # Initializes a counter for the picture names in case 
 # other pictures exists.
@@ -17,7 +24,7 @@ else:
 	if files:
 		counter = max([int(fname.split('.')[0]) for fname in files]) + 1
 		# Uncomment next line if you want to create a complete new picture data
-		counter = 1
+		# counter = 1
 	else:
 		counter = 1
 
