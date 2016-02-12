@@ -1,7 +1,7 @@
 import cv2
 
 # paths to the trained models by opencv to detect faces and eyes
-path = 'face detection/cascades/haarcascades/'
+path = 'face_detection/cascades/haarcascades/'
 frontal = path + 'haarcascade_frontalface_alt.xml'
 side = path + 'haarcascade_profileface.xml'
 eye = path + 'haarcascade_eye.xml'
@@ -68,6 +68,7 @@ def normalize_faces(faces, color=False, size=(100,100)):
     
 
 ##### FUNCTIONS TO DETECT ROTATED/TILTED FACES #####
+# NOT IN USE
 
 def detect_side_face(frame_gray):
     # Change to True if we want to detect only one face

@@ -1,6 +1,6 @@
 #!/bin/env python
 import sys, cv2, os, numpy as np
-sys.path.append('face detection')
+sys.path.append('face_detection')
 from detection import *
 
 path = 'people/'
@@ -53,4 +53,3 @@ while(True):
 		break
 video.release()
 cv2.destroAllWindows()
-
