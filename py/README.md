@@ -1,6 +1,6 @@
 #Build a Face Recognition System
 
-These files demonstrate the final system that it will be created at the end of the tutorial.
+These files demonstrate what it will be achieved at the end of the tutorial. But in the notebok and with better use of classes.
 
 ### Adding a new face to the dataset
 To add add new faces to the dataset execute:
