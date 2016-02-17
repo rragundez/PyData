@@ -11,7 +11,7 @@ from detection import *
 try: 
 	name = 'people/' + sys.argv[1].split()[0].strip()
 except:
-	print "Next time run: python build_dataset.py YOUR_NAME"
+	print "Next time run: python get_faces.py YOUR_NAME"
 	name = 'people/' + raw_input('What is your name?').split()[0].strip()
 
 # Initializes a counter for the picture names in case 
