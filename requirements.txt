@@ -1,10 +1,8 @@
 astroid==1.4.4
 colorama==0.3.6
 future==0.15.2
-git-pylint-commit-hook==2.1.1
 lazy-object-proxy==1.2.1
 numpy==1.10.4
-pylint==1.5.4
 six==1.10.0
 wheel==0.29.0
 wrapt==1.10.6
