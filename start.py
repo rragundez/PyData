@@ -87,7 +87,11 @@ def recognize_people(people_folder, shape):
     :type people_folder: String
     :type shape: String
     """
-    people = [person for person in os.listdir(people_folder)]
+    try:
+        people = [person for person in os.listdir(people_folder)]
+    except:
+        print "Have you added at least one person to the system?"
+        sys.exit()
     print "This are the people in the Recognition System:"
     for person in people:
         print "-" + person
@@ -183,6 +187,8 @@ if __name__ == '__main__':
     SHAPE = "rectangle"
 
     if CHOICE == 1:
+        if not os.path.exists(PEOPLE_FOLDER):
+            os.makedirs(PEOPLE_FOLDER)
         add_person(PEOPLE_FOLDER, SHAPE)
     elif CHOICE == 2:
         recognize_people(PEOPLE_FOLDER, SHAPE)
