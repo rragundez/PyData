@@ -105,10 +105,13 @@ def recognize_people(people_folder, shape):
     detector = FaceDetector('face_recognition_system/frontal_face.xml')
     if choice == 1:
         recognizer = cv2.face.createEigenFaceRecognizer()
+        threshold = 3550
     elif choice == 2:
         recognizer = cv2.face.createFisherFaceRecognizer()
+        threshold = 120
     elif choice == 3:
         recognizer = cv2.face.createLBPHFaceRecognizer()
+        threshold = 95
     images = []
     labels = []
     labels_people = {}
@@ -132,8 +135,8 @@ def recognize_people(people_folder, shape):
             for i, face_img in enumerate(faces_img):
                 pred, conf = recognizer.predict(face_img)
                 # print 'Prediction: ' + labels_people[pred]
-                # print 'Confidence: ' + str(round(conf))
-                if conf < 120:
+                print 'Confidence: ' + str(round(conf))
+                if conf < threshold:
                     cv2.putText(frame, labels_people[pred].capitalize(),
                                 (faces_coord[i][0], faces_coord[i][1] - 2),
                                 cv2.FONT_HERSHEY_PLAIN, 1.7, (206, 0, 209), 2,
