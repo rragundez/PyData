@@ -1,4 +1,4 @@
-<img align="right" width="20%" src="http://www.apulus.com/wp-content/uploads/2014/11/OpenCV-Logo.png" alt="OpenCV Logo">
+<img margin-top="50px" align="right" width="20%" src="http://www.apulus.com/wp-content/uploads/2014/11/OpenCV-Logo.png" alt="OpenCV Logo">
 # Steps to install OpenCV on Ubuntu and OSX (Python 2.7)
 
 <p>Unfortunately OpenCV needs to be compiled from source which can get a bit messy. Here I list the steps that I followed
@@ -6,14 +6,6 @@ on my Ubuntu system and on a Digital Ocean's droplet. A colleague used this step
 <p>We will compile the standard OpenCV source files PLUS the extra modules that contain the face recognition classes
 needed for the tutorial</p>
 <p>This steps will download the files in your home folder and will deleted them once installation is finished</p>
-
-### Requiered Packages for this tutorial
-<ul style="list-style-type:square">
-  <li>OpenCV (cv2)</li>
-  <li>Numpy</li>
-  <li>os</li>
-  <li>matpotlib</li>
-</ul>
 
 ## Installing pre-requisite packages
 `$ apt-get update`<br>
