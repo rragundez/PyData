@@ -1,11 +1,11 @@
+<img align="right" width="40%" src="http://pydata.org/amsterdam2016/static/images/pydata-logo-amsterdam-2016.png" alt="PyData Amsterdam Logo">
 # PyData Tutorial
 
 This repository is created with the intention for people who will attend the PyData tutorial to have a look at the code prior to the tutorial
 
-<img align="left" width="45%" src="http://pydata.org/amsterdam2016/static/images/pydata-logo-amsterdam-2016.png" alt="PyData Amsterdam Logo">
-
-<img align="right" width="45%" src="http://www.qualogy.com/wp-content/themes/qua/images/q_logo.png" alt="Qualogy Logo">
 # Building a Face Recognition System with OpenCV in the blink of an Eye
+
+<img align="right" width="30%" src="http://www.qualogy.com/wp-content/themes/qua/images/q_logo.png" alt="Qualogy Logo">
 
 This notebook was created for the tutorial during the PyData Meeting:
 - Author: <font color='red'>Rodrigo Agundez from Qualogy Solutions</font>
