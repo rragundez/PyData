@@ -52,6 +52,5 @@ It has C++, C, Python, Java and MATLAB interfaces and supports Windows, Linux, A
 <ul style="list-style-type:square">
   <li>OpenCV (cv2)</li>
   <li>Numpy</li>
-  <li>os</li>
-  <li>matpotlib</li>
+  <li>matplotlib</li>
 </ul>
