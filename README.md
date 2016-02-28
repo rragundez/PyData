@@ -2,16 +2,17 @@
 
 This repository is created with the intention for people who will attend the PyData tutorial to have a look at the code prior to the tutorial
 
-<img style="float: left; width: 30%" src="http://pydata.org/amsterdam2016/static/images/pydata-logo-amsterdam-2016.png">
+<img align="left" width="45%" src="http://pydata.org/amsterdam2016/static/images/pydata-logo-amsterdam-2016.png" alt="PyData Amsterdam Logo">
 
-<img style="float: right; width: 30%" src="https://pbs.twimg.com/profile_images/458970549146759168/eCDy8x2E.jpeg">
+<img align="right" width="45%" src="http://www.qualogy.com/wp-content/themes/qua/images/q_logo.png" alt="Qualogy Logo">
 # Building a Face Recognition System with OpenCV in the blink of an Eye
 
 This notebook was created for the tutorial during the PyData Meeting:
 - Author: <font color='red'>Rodrigo Agundez from Qualogy Solutions</font>
-- Place: Amsterdam
-- Date: March 12-13, 2016
-- Time: ?
+- Place: Amsterdam, Papaverweg 265
+- Date: Saturday, March 12, 2016
+- Time: 16:15
+- Room: 2
 
 The goal of this tutorial is to build a simple face recognition system with the use of the opencv library. This tutorial is separated in three parts:
 - Basic manipulation techniques of images and video using OpenCV.
@@ -49,7 +50,7 @@ It has C++, C, Python, Java and MATLAB interfaces and supports Windows, Linux, A
 
 ### Requiered Packages for this tutorial
 <ul style="list-style-type:square">
-  <li>cv2</li>
+  <li>OpenCV (cv2)</li>
   <li>Numpy</li>
   <li>os</li>
   <li>matpotlib</li>
