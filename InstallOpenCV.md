@@ -22,8 +22,7 @@ libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libatlas-base-dev gfort
 
 ## Compiling source files
 ```bash
-$ cmake
-  -D CMAKE_BUILD_TYPE=RELEASE \
+$ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D CMAKE_INSTALL_PREFIX=/usr/local \
 	-D INSTALL_C_EXAMPLES=OFF \
 	-D INSTALL_PYTHON_EXAMPLES=ON \
