@@ -2,6 +2,9 @@
 __pycache__/
 *.py[cod]
 
+# Pylint configuration file
+.pylintrc
+
 # C extensions
 *.so
 
