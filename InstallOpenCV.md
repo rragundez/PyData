@@ -2,7 +2,7 @@
 # Steps to install OpenCV 3.0.0 on Ubuntu and OSX (Python 2.7)
 
 <p>Unfortunately OpenCV needs to be compiled from source which can get a bit messy. Here I list the steps that I followed
-on my Ubuntu system and on a Digital Ocean's droplet. A colleague used this steps succesfully on an OSX system.</p>
+on Ubuntu 14.04.</p>
 <p>We will compile the standard OpenCV source files PLUS the extra modules that contain the face recognition classes
 needed for the tutorial</p>
 <p>This steps will download the files in your home folder and will deleted them once installation is finished</p>
