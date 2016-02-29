@@ -1,5 +1,5 @@
 <img margin-top="50px" align="right" width="20%" src="http://www.apulus.com/wp-content/uploads/2014/11/OpenCV-Logo.png" alt="OpenCV Logo">
-# Steps to install OpenCV on Ubuntu and OSX (Python 2.7)
+# Steps to install OpenCV 3.0.0 on Ubuntu and OSX (Python 2.7)
 
 <p>Unfortunately OpenCV needs to be compiled from source which can get a bit messy. Here I list the steps that I followed
 on my Ubuntu system and on a Digital Ocean's droplet. A colleague used this steps succesfully on an OSX system.</p>
@@ -16,9 +16,9 @@ libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libatlas-base-dev gfort
 
 ## Downloading source files
 `$ cd ~; git clone https://github.com/Itseez/opencv_contrib.git`<br>
-`$ cd opencv_contrib; git checkout 3.1.0`<br>
+`$ cd opencv_contrib`<br>
 `$ cd ~; git clone https://github.com/Itseez/opencv.git`<br>
-`$ cd opencv; git checkout 3.1.0; mkdir build; cd build`<br>
+`$ cd opencv; mkdir build; cd build`<br>
 
 ## Compiling source files
 ```bash
