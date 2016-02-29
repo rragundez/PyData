@@ -48,7 +48,7 @@ class FaceDetector(object):
         min_neighbors = 5
 
         # Sets the min_size of the face we want to detect. Default is 20x20
-        min_size = (100, 100)
+        min_size = (30, 30)
 
         # Change to True if we want to detect only one face
         flags = cv2.CASCADE_FIND_BIGGEST_OBJECT | \
