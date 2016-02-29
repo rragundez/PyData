@@ -9,6 +9,7 @@ from face_recognition_system.videocamera import VideoCamera
 from face_recognition_system.detectors import FaceDetector
 import face_recognition_system.operations as op
 import cv2
+from cv2 import __version__
 
 def get_images(frame, faces_coord, shape):
     """ Perfrom transformation on original and face images.
@@ -137,7 +138,11 @@ def recognize_people(people_folder, shape):
         if len(faces_coord):
             frame, faces_img = get_images(frame, faces_coord, shape)
             for i, face_img in enumerate(faces_img):
-                pred, conf = recognizer.predict(face_img)
+                try:
+                    pred, conf = recognizer.predict(face_img)
+                except:
+                    print "Are you using OpenCV version 3.0.0?"
+                    print "Your version is: " + __version__
                 # print 'Prediction: ' + labels_people[pred]
                 print 'Confidence: ' + str(round(conf))
                 if conf < threshold:
@@ -173,6 +178,10 @@ def check_choice():
     return choice
 
 if __name__ == '__main__':
+    if __version__ != "3.0.0":
+        print "Your OpenCV version is " + __version__
+        print "Please use version 3.0.0"
+        sys.exit()
     print 30 * '-'
     print "   POSSIBLE ACTIONS"
     print 30 * '-'
