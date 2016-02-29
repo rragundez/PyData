@@ -1,7 +1,7 @@
 <img align="right" width="40%" src="http://pydata.org/amsterdam2016/static/images/pydata-logo-amsterdam-2016.png" alt="PyData Amsterdam Logo">
 # PyData Tutorial
 
-This repository is created with the intention for people who will attend the PyData tutorial to have a look at the code prior to the tutorial
+This repository is created with the intention for people who will attend the PyData tutorial to have a look at the code prior to the tutorial. This OpenCV tutorial is based on version 3.0.0
 
 # Building a Face Recognition System with OpenCV in the blink of an Eye
 
