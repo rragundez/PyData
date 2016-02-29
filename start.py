@@ -138,13 +138,16 @@ def recognize_people(people_folder, shape):
         if len(faces_coord):
             frame, faces_img = get_images(frame, faces_coord, shape)
             for i, face_img in enumerate(faces_img):
-                try:
+                if __version__ == "3.1.0":
+                    pred = recognizer.predict(face_img)
+                    conf = 0
+                    print 'Confidence: NA'
+                    print 'Threshold: NO THRESHOLD IS APPLIED'
+                else:
                     pred, conf = recognizer.predict(face_img)
-                except:
-                    print "Are you using OpenCV version 3.0.0?"
-                    print "Your version is: " + __version__
-                # print 'Prediction: ' + labels_people[pred]
-                print 'Confidence: ' + str(round(conf))
+                    print 'Confidence: ' + str(round(conf))
+                    print 'Threshold: ' + str(threshold)
+                    # print 'Prediction: ' + labels_people[pred]
                 if conf < threshold:
                     cv2.putText(frame, labels_people[pred].capitalize(),
                                 (faces_coord[i][0], faces_coord[i][1] - 2),
@@ -179,9 +182,10 @@ def check_choice():
 
 if __name__ == '__main__':
     if __version__ != "3.0.0":
+        print "\n\n***IMPORTANT***"
         print "Your OpenCV version is " + __version__
-        print "Please use version 3.0.0"
-        sys.exit()
+        print "Please use version 3.0.0 for optimal results.\nFor OpenCV " \
+                "3.1.0 no threshold is used in the recognition."
     print 30 * '-'
     print "   POSSIBLE ACTIONS"
     print 30 * '-'
