@@ -16,7 +16,6 @@ libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libatlas-base-dev gfort
 
 ## Downloading source files
 `$ cd ~; git clone https://github.com/Itseez/opencv_contrib.git`<br>
-`$ cd opencv_contrib`<br>
 `$ cd ~; git clone https://github.com/Itseez/opencv.git`<br>
 `$ cd opencv; mkdir build; cd build`<br>
 
