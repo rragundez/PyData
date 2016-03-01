@@ -110,13 +110,13 @@ def recognize_people(people_folder, shape):
     detector = FaceDetector('face_recognition_system/frontal_face.xml')
     if choice == 1:
         recognizer = cv2.face.createEigenFaceRecognizer()
-        threshold = 3550
+        threshold = 4000
     elif choice == 2:
         recognizer = cv2.face.createFisherFaceRecognizer()
-        threshold = 120
+        threshold = 200
     elif choice == 3:
         recognizer = cv2.face.createLBPHFaceRecognizer()
-        threshold = 95
+        threshold = 105
     images = []
     labels = []
     labels_people = {}
@@ -139,12 +139,16 @@ def recognize_people(people_folder, shape):
             frame, faces_img = get_images(frame, faces_coord, shape)
             for i, face_img in enumerate(faces_img):
                 if __version__ == "3.1.0":
-                    pred = recognizer.predict(face_img)
-                    conf = 0
-                    print 'Confidence: NA'
-                    print 'Threshold: NO THRESHOLD IS APPLIED'
+                    collector = cv2.face.MinDistancePredictCollector()
+                    recognizer.predict(face_img, collector)
+                    conf = collector.getDist()
+                    pred = collector.getLabel()
+                    print "Prediction: " + str(pred)
+                    print 'Confidence: ' + str(round(conf))
+                    print 'Threshold: ' + str(threshold)
                 else:
                     pred, conf = recognizer.predict(face_img)
+                    print "Prediction: " + str(pred)
                     print 'Confidence: ' + str(round(conf))
                     print 'Threshold: ' + str(threshold)
                     # print 'Prediction: ' + labels_people[pred]
@@ -181,11 +185,6 @@ def check_choice():
     return choice
 
 if __name__ == '__main__':
-    if __version__ != "3.0.0":
-        print "\n\n***IMPORTANT***"
-        print "Your OpenCV version is " + __version__
-        print "Please use version 3.0.0 for optimal results.\nFor OpenCV " \
-                "3.1.0 no threshold is used in the recognition."
     print 30 * '-'
     print "   POSSIBLE ACTIONS"
     print 30 * '-'
