@@ -30,8 +30,8 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D BUILD_EXAMPLES=ON ..
 ```
 `$ make -j4` (The number is amout of processor cores in your system)<br>
-`$ make install`<br>
-`$ ldconfig`
+`$ sudo make install`<br>
+`$ sudo ldconfig`
 
 ## Check compiled file
 `$ cd /usr/local/lib/python2.7`<br>
