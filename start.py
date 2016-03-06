@@ -113,7 +113,7 @@ def recognize_people(people_folder, shape):
         threshold = 4000
     elif choice == 2:
         recognizer = cv2.face.createFisherFaceRecognizer()
-        threshold = 200
+        threshold = 300
     elif choice == 3:
         recognizer = cv2.face.createLBPHFaceRecognizer()
         threshold = 105
@@ -143,15 +143,11 @@ def recognize_people(people_folder, shape):
                     recognizer.predict(face_img, collector)
                     conf = collector.getDist()
                     pred = collector.getLabel()
-                    print "Prediction: " + str(pred)
-                    print 'Confidence: ' + str(round(conf))
-                    print 'Threshold: ' + str(threshold)
                 else:
                     pred, conf = recognizer.predict(face_img)
-                    print "Prediction: " + str(pred)
-                    print 'Confidence: ' + str(round(conf))
-                    print 'Threshold: ' + str(threshold)
-                    # print 'Prediction: ' + labels_people[pred]
+                print "Prediction: " + str(pred)
+                print 'Confidence: ' + str(round(conf))
+                print 'Threshold: ' + str(threshold)
                 if conf < threshold:
                     cv2.putText(frame, labels_people[pred].capitalize(),
                                 (faces_coord[i][0], faces_coord[i][1] - 2),
@@ -196,7 +192,7 @@ if __name__ == '__main__':
     CHOICE = check_choice()
 
     PEOPLE_FOLDER = "face_recognition_system/people/"
-    SHAPE = "rectangle"
+    SHAPE = "ellipse"
 
     if CHOICE == 1:
         if not os.path.exists(PEOPLE_FOLDER):
