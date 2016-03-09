@@ -1,5 +1,5 @@
 <img margin-top="50px" align="right" width="20%" src="http://www.apulus.com/wp-content/uploads/2014/11/OpenCV-Logo.png" alt="OpenCV Logo">
-# Steps to install OpenCV 3.0.0 on Ubuntu (Python 2.7)
+# Steps to compile OpenCV 3.1.0 on Ubuntu (Python 2.7)
 
 <p>Unfortunately OpenCV needs to be compiled from source which can get a bit messy. Here I list the steps that I followed
 on Ubuntu 14.04.</p>
