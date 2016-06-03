@@ -1,10 +1,24 @@
 
-# Building the Docker image
+# Setup
+
+## Install Docker
+
+Follow <a url=https://docs.docker.com/engine/installation/>instructions</a>.
+
+## Build the Docker image
 
 `docker build --pull -t facerec .`
 
-# Running the Docker image
+Here, `facerec` is a tag for this docker image. Feel free to use whatever youn like.
+
+# Operation
+
+## Run the Docker image
 
 `docker run -p 8888:8888 -p 6006:6006 -v ~/FaceRecRodrigoAgundez/PyData/:/notebooks -it --rm facerec`
 
 Here `~/FaceRecRodrigoAgundez/PyData/` is the path to a local Git repository. Said repository is cloned from a GitHub fork of <url>https://github.com/ragundez/PyData</url>.
+
+## Test the installation
+
+Browse in Jupyter to one of the notebooks and run the "import" cell.
