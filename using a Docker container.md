@@ -11,6 +11,8 @@ Clone locally a GitHub fork of <url>https://github.com/ragundez/PyData</url>.
 
 ## Build the Docker image
 
+Browse to the root of the said local Git repository.
+
 `docker build --pull -t facerec .`
 
 Here, `facerec` is a tag for this docker image. Feel free to use whatever youn like.
