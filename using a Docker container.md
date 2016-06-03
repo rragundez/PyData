@@ -3,7 +3,7 @@
 
 ## Install Docker
 
-Follow <a url=https://docs.docker.com/engine/installation/>instructions</a>.
+Follow [instructions](https://docs.docker.com/engine/installation/).
 
 ## Build the Docker image
 
